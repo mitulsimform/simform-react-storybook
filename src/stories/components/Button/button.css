@@ -8,38 +8,38 @@
   text-align: center;
 }
 .button-action{
-  border-color: transparent;
-  color: white;
-  background-color: #00A780;
+  border-color: transparent !important;
+  color: white!important;
+  background-color: #00A780!important;
 }
 
 .button-secondary{
-  border-color:  #00A780;
-  color: #00A780;
-  background-color: #FFFFFF;
+  border-color:  #00A780!important;
+  color: #00A780!important;
+  background-color: #FFFFFF!important;
 }
 
 .button-tertiary{
-  border-color: transparent;
-  color: #2B2B35;
-  background-color: #FFFFFF;
-  box-shadow:#FFFFFF;
+  border-color: transparent!important;
+  color: #2B2B35!important;
+  background-color: #FFFFFF!important;
+  box-shadow:#FFFFFF!important;
 }
 
 .button-upgrade{
-  border-color: transparent;
-  color: white;
-  background-color: #0082FF;
+  border-color: transparent!important;
+  color: white!important;
+  background-color: #0082FF!important;
 }
 .button-destructive{
-  border-color: transparent;
-  color: white;
-  background-color: #EE5C33;
+  border-color: transparent!important;
+  color: white!important;
+  background-color: #EE5C33!important;
 }
 .button-accent{
-  border-color: transparent;
-  color: #2B2B35;
-  background-color: #FFC42A;
+  border-color: transparent!important;
+  color: #2B2B35!important;
+  background-color: #FFC42A!important;
   border-radius: 100px !important;
   font-family: Inter;
   font-size: 14px;
@@ -78,36 +78,36 @@
 }
 
 .button-action:hover, .button-action:focus{
-  background-color: #14D0A5 ;
-  color: white;
+  background-color: #14D0A5 !important;
+  color: white !important;
 }
 
 .button-secondary:hover, .button-secondary:focus{
-  background-color: #E4FFF9;
-  color: #00A780, 100%;
+  background-color: #E4FFF9 !important;
+  color: #84a19b !important;
 }
 
 .button-tertiary:hover, .button-tertiary:focus{
-  background-color: #EDEDED ;
-  color: #2B2B35 ;
-  border-color: transparent;
+  background-color: #EDEDED !important;
+  color: #2B2B35 !important;
+  border-color: transparent !important;
 }
 .button-upgrade:hover, .button-upgrade:focus{
-  background-color: #006CD5;
-  color: #E4FFF9 ;
-  border-color: transparent;
+  background-color: #006CD5 !important;
+  color: #E4FFF9 !important;
+  border-color: transparent !important;
 }
 
 .button-destructive:hover, .button-destructive:focus{
-  background-color: #D74B23;
-  color: #E4FFF9 ;
-  border-color: transparent;
+  background-color: #D74B23 !important;
+  color: #E4FFF9 !important;
+  border-color: transparent !important;
 }
 
 .button-accent:hover, .button-accent:focus{
-  background-color: #E5B129;
-  color: #2B2B35 ;
-  border-color: transparent;
+  background-color: #E5B129 !important;
+  color: #2B2B35 !important;
+  border-color: transparent !important;
 }
 
 .ant-btn[disabled], .ant-btn[disabled]:hover, .ant-btn[disabled]:focus, .ant-btn[disabled]:active{
