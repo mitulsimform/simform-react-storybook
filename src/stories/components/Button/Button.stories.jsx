@@ -3,7 +3,7 @@ import React from "react";
 import { Button } from "./Button";
 
 export default {
-  title: "Example/Button",
+  title: "Simform/Button",
   component: Button,
   argTypes: {
     backgroundColor: { control: "color" },
@@ -12,26 +12,38 @@ export default {
 
 const Template = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  label: "Primary",
+export const Action = Template.bind({});
+Action.args = {
+  label: "Button",
+  typeOfButton: "action",
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  size: "small",
+export const Secondary = Template.bind({});
+Secondary.args = {
   label: "Button",
-  backgroundColor: "#0DBD95",
+  typeOfButton: "secondary",
 };
 
-export const Meduim = Template.bind({});
-Meduim.args = {
-  size: "medium",
+export const Tertiary = Template.bind({});
+Tertiary.args = {
   label: "Button",
+  typeOfButton: "tertiary",
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: "large",
+export const Upgrade = Template.bind({});
+Upgrade.args = {
   label: "Button",
+  typeOfButton: "upgrade",
+};
+
+export const Destructive = Template.bind({});
+Destructive.args = {
+  label: "Button",
+  typeOfButton: "destructive",
+};
+
+export const Accent = Template.bind({});
+Accent.args = {
+  label: "Button",
+  typeOfButton: "accent",
 };

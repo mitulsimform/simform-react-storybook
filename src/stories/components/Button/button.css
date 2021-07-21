@@ -1,8 +1,55 @@
 .button{
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.button-action{
   border-color: transparent;
   color: white;
   background-color: #00A780;
 }
+
+.button-secondary{
+  border-color:  #00A780;
+  color: #00A780;
+  background-color: #FFFFFF;
+}
+
+.button-tertiary{
+  border-color: transparent;
+  color: #2B2B35;
+  background-color: #FFFFFF;
+  box-shadow:#FFFFFF;
+}
+
+.button-upgrade{
+  border-color: transparent;
+  color: white;
+  background-color: #0082FF;
+}
+.button-destructive{
+  border-color: transparent;
+  color: white;
+  background-color: #EE5C33;
+}
+.button-accent{
+  border-color: transparent;
+  color: #2B2B35;
+  background-color: #FFC42A;
+  border-radius: 100px !important;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
 .button-default-small{
   height: 32px;
   width: 132px;
@@ -30,7 +77,53 @@
 
 }
 
-.ant-btn:hover, .ant-btn:focus{
-  background-color: #14D0A5;
+.button-action:hover, .button-action:focus{
+  background-color: #14D0A5 ;
   color: white;
+}
+
+.button-secondary:hover, .button-secondary:focus{
+  background-color: #E4FFF9;
+  color: #00A780, 100%;
+}
+
+.button-tertiary:hover, .button-tertiary:focus{
+  background-color: #EDEDED ;
+  color: #2B2B35 ;
+  border-color: transparent;
+}
+.button-upgrade:hover, .button-upgrade:focus{
+  background-color: #006CD5;
+  color: #E4FFF9 ;
+  border-color: transparent;
+}
+
+.button-destructive:hover, .button-destructive:focus{
+  background-color: #D74B23;
+  color: #E4FFF9 ;
+  border-color: transparent;
+}
+
+.button-accent:hover, .button-accent:focus{
+  background-color: #E5B129;
+  color: #2B2B35 ;
+  border-color: transparent;
+}
+
+.disabled{
+  background-color: #D1D1D1 !important;
+  pointer-events: none;
+  left: 3.41%;
+  right: 3.41%;
+  top: 12.5%;
+  bottom: 12.5%;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF !important;
 }

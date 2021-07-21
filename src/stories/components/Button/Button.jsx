@@ -7,24 +7,31 @@ import styled from "styled-components";
 /**
  * Primary UI component for user interaction
  */
-const CustomButton = styled(AntDButton)``;
 export const Button = ({
   backgroundColor,
   size,
   label,
   disabled,
+  typeOfButton,
   ...props
 }) => {
   return (
-    <CustomButton
-      type="button"
-      className={[`button-default-${size}`, `button`].join(" ")}
-      style={backgroundColor && { backgroundColor }}
-      {...props}
-      disabled={disabled}
-    >
-      {label}
-    </CustomButton>
+    <>
+      <AntDButton
+        type="button"
+        className={[
+          `button-default-${size}`,
+          `button-${typeOfButton}`,
+          `button`,
+          `${!disabled ? `` : `disbled`}`,
+        ].join(" ")}
+        style={backgroundColor && { backgroundColor }}
+        {...props}
+        disabled={disabled}
+      >
+        {label}
+      </AntDButton>
+    </>
   );
 };
 
@@ -44,11 +51,24 @@ Button.propTypes = {
   /**
    * Button contents
    */
+
   label: PropTypes.string.isRequired,
   /**
    * Optional click handler
    */
+
   onClick: PropTypes.func,
+  /**
+   * Button Type
+   */
+  typeOfButton: PropTypes.oneOf([
+    "action",
+    "secondary",
+    "tertiary",
+    "upgrade",
+    "destructive",
+    "accent",
+  ]),
 };
 
 Button.defaultProps = {
@@ -56,4 +76,5 @@ Button.defaultProps = {
   size: "medium",
   onClick: undefined,
   disabled: false,
+  typeOfButton: "action",
 };

@@ -3,7 +3,7 @@ import React from "react";
 import { ModalDialogue } from "./ModalDialogue";
 
 export default {
-  title: "Example/ModalDialogue",
+  title: "Simform/ModalDialogue",
   component: ModalDialogue,
   argTypes: {},
   parameters: {
