@@ -23,7 +23,6 @@ export const Button = ({
           `button-default-${size}`,
           `button-${typeOfButton}`,
           `button`,
-          `${!disabled ? `` : `disbled`}`,
         ].join(" ")}
         style={backgroundColor && { backgroundColor }}
         {...props}

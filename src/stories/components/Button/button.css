@@ -110,20 +110,10 @@
   border-color: transparent;
 }
 
-.disabled{
-  background-color: #D1D1D1 !important;
-  pointer-events: none;
-  left: 3.41%;
-  right: 3.41%;
-  top: 12.5%;
-  bottom: 12.5%;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: #FFFFFF !important;
+.ant-btn[disabled], .ant-btn[disabled]:hover, .ant-btn[disabled]:focus, .ant-btn[disabled]:active{
+  color: #FFFFFF;
+  background: #D1D1D1;
+  border-color: #D1D1D1;
+  text-shadow: none;
+  box-shadow: none;
 }
