@@ -7,42 +7,48 @@ import "./modalDialogue.css";
  * Primary UI component for user interaction
  */
 export const ModalDialogue = ({
-  primary,
-  backgroundColor,
-  size,
-  label,
+  title,
+  htmlContent,
+  onCancelClick,
+  onOkClick,
+  onShowModalClick,
+  textContent,
+  formName,
   ...props
 }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
-  const showModal = () => {
+  const showModal = (e) => {
     setIsModalVisible(true);
+    onShowModalClick(e);
   };
 
-  const handleOk = () => {
+  const handleOk = (event) => {
     setIsModalVisible(false);
+    onCancelClick(event);
   };
 
-  const handleCancel = () => {
+  const handleCancel = (event) => {
     setIsModalVisible(false);
+    onOkClick(event);
   };
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
+
   return (
     <>
       <Button type="primary" onClick={showModal}>
         Open Modal
       </Button>
       <Modal
-        title={label}
+        title={title}
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+        <div
+          id="modalDialogue"
+          data-testid="modalDialogue"
+          dangerouslySetInnerHTML={{ __html: htmlContent }}
+        ></div>
       </Modal>
     </>
   );
@@ -50,30 +56,30 @@ export const ModalDialogue = ({
 
 ModalDialogue.propTypes = {
   /**
-   * Is this the principal call to action on the page?
+   * Title contents
    */
-  primary: PropTypes.bool,
+  title: PropTypes.string.isRequired,
   /**
-   * What background color to use
+   * It can be html or Text content including some form
    */
-  backgroundColor: PropTypes.string,
-  /**
-   * How large should the button be?
-   */
-  size: PropTypes.oneOf(["small", "medium", "large", "Xlarge"]),
-  /**
-   * Button contents
-   */
-  label: PropTypes.string.isRequired,
+  htmlContent: PropTypes.string,
   /**
    * Optional click handler
    */
-  onClick: PropTypes.func,
+  onCancelClick: PropTypes.func,
+  /**
+   * Optional click handler
+   */
+  onOkClick: PropTypes.func,
+  /**
+   * Optional click handler
+   */
+  onShowModalClick: PropTypes.func,
 };
 
 ModalDialogue.defaultProps = {
-  backgroundColor: null,
-  primary: false,
-  size: "medium",
-  onClick: undefined,
+  title: "",
+  onCancelClick: undefined,
+  onShowModalClick: undefined,
+  onOkClick: undefined,
 };

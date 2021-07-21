@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import { Button } from './Button';
+import { Button } from "./Button";
 
 export default {
-  title: 'Example/Button',
+  title: "Example/Button",
   component: Button,
   argTypes: {
-    backgroundColor: { control: 'color' },
+    backgroundColor: { control: "color" },
   },
 };
 
@@ -14,28 +14,24 @@ const Template = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
-  label: 'Button',
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
-export const XLarge = Template.bind({});
-XLarge.args = {
-  size: 'large',
-  label: 'Button',
-};
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
+  label: "Primary",
 };
 
 export const Small = Template.bind({});
 Small.args = {
-  size: 'small',
-  label: 'Button',
-  backgroundColor:'#0DBD95'
+  size: "small",
+  label: "Button",
+  backgroundColor: "#0DBD95",
+};
+
+export const Meduim = Template.bind({});
+Meduim.args = {
+  size: "medium",
+  label: "Button",
+};
+
+export const Large = Template.bind({});
+Large.args = {
+  size: "large",
+  label: "Button",
 };

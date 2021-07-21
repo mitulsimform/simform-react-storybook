@@ -5,16 +5,22 @@ import { ModalDialogue } from "./ModalDialogue";
 export default {
   title: "Example/ModalDialogue",
   component: ModalDialogue,
-  argTypes: {
-    backgroundColor: { control: "color" },
+  argTypes: {},
+  parameters: {
+    layout: "centered",
   },
 };
 
 const Template = (args) => <ModalDialogue {...args} />;
 
-export const Modal = Template.bind({});
-Modal.args = {
-  primary: true,
-  label: "Button",
-  children: "<p>Something</>",
+export const ModalForHTML = Template.bind({});
+ModalForHTML.args = {
+  title: "Title",
+  htmlContent: "Some Text",
 };
+
+// export const ModalForText = Template.bind({});
+// ModalForText.args = {
+//   title: "Title",
+//   textContent: "Test",
+// };

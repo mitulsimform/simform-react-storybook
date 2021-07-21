@@ -1,21 +1,30 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './button.css';
+import React from "react";
+import PropTypes from "prop-types";
+import "./button.css";
+import { Button as AntDButton } from "antd";
+import styled from "styled-components";
 
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+const CustomButton = styled(AntDButton)``;
+export const Button = ({
+  backgroundColor,
+  size,
+  label,
+  disabled,
+  ...props
+}) => {
   return (
-    <button
+    <CustomButton
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      className={[`button-default-${size}`, `button`].join(" ")}
       style={backgroundColor && { backgroundColor }}
       {...props}
+      disabled={disabled}
     >
       {label}
-    </button>
+    </CustomButton>
   );
 };
 
@@ -23,7 +32,7 @@ Button.propTypes = {
   /**
    * Is this the principal call to action on the page?
    */
-  primary: PropTypes.bool,
+  disabled: PropTypes.bool,
   /**
    * What background color to use
    */
@@ -31,7 +40,7 @@ Button.propTypes = {
   /**
    * How large should the button be?
    */
-  size: PropTypes.oneOf(['small', 'medium', 'large','Xlarge']),
+  size: PropTypes.oneOf(["small", "medium", "large"]),
   /**
    * Button contents
    */
@@ -44,7 +53,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   backgroundColor: null,
-  primary: false,
-  size: 'medium',
+  size: "medium",
   onClick: undefined,
+  disabled: false,
 };
