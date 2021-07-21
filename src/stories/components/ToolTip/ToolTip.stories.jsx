@@ -6,6 +6,9 @@ export default {
   title: "Simform/ToolTip",
   component: CustomToolTip,
   argTypes: {},
+  parameters: {
+    layout: "centered",
+  },
 };
 
 const Template = (args) => <CustomToolTip {...args} />;
@@ -14,4 +17,5 @@ export const ToolTip = Template.bind({});
 ToolTip.args = {
   title: "Some Content title",
   children: "Some Content",
+  toolTipPlaceMent: "top",
 };

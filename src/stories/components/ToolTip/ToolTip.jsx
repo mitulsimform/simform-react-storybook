@@ -7,10 +7,12 @@ import { Button as AntDButton, Tooltip } from "antd";
 /**
  * Primary UI component for user interaction
  */
-export const CustomToolTip = ({ children, title }) => {
+export const CustomToolTip = ({ children, title, toolTipPlaceMent }) => {
   return (
     <>
-      <Tooltip title={title}>{children}</Tooltip>
+      <Tooltip title={title} placement={toolTipPlaceMent}>
+        {children}
+      </Tooltip>
     </>
   );
 };
@@ -24,8 +26,25 @@ CustomToolTip.propTypes = {
    * Title to show in toooltip
    */
   children: PropTypes.string.isRequired,
+
+  toolTipPlaceMent: PropTypes.oneOf([
+    "top",
+    "left",
+    "right",
+    "bottom",
+    "topLeft",
+    "topRight",
+    "bottomLeft",
+    "bottomRight",
+    "leftTop",
+    "leftBottom",
+    "rightTop",
+    "rightBottom",
+  ]),
 };
 
 CustomToolTip.defaultProps = {
   title: null,
+  children: "",
+  toolTipPlaceMent: "top",
 };
