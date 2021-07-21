@@ -29,7 +29,7 @@ Story book can be run with given command "npm run storybook".
 
 ### `npm run build-storybook` 
 
-Story book can be build can be created by this command "npm run build-storybook"
+Story book build can be created by this command "npm run build-storybook"
 
 ### `Demo URL`
 https://simform-storybook.netlify.app/
