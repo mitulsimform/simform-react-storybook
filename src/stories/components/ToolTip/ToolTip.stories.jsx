@@ -5,9 +5,7 @@ import { CustomToolTip } from "./ToolTip";
 export default {
   title: "Simform/ToolTip",
   component: CustomToolTip,
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
+  argTypes: {},
 };
 
 const Template = (args) => <CustomToolTip {...args} />;
