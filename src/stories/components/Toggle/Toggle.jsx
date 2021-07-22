@@ -6,7 +6,12 @@ import "./toggle.css";
 /**
  * Primary UI component for user interaction
  */
-export const Toggle = ({ onChange, backgroundColor, defaultValue }) => {
+export const Toggle = ({
+  onChange,
+  backgroundColor,
+  defaultValue,
+  checked,
+}) => {
   const [switchValue, setSwitchValue] = useState(defaultValue);
   return (
     <>
@@ -21,7 +26,7 @@ export const Toggle = ({ onChange, backgroundColor, defaultValue }) => {
             backgroundColor: switchValue ? backgroundColor : null,
           }
         }
-        checked={switchValue}
+        checked={checked || defaultValue}
       />
     </>
   );
@@ -35,10 +40,14 @@ Toggle.propTypes = {
   /**
    * Optional default value
    */
-  defaultValue: PropTypes.string,
+  defaultValue: PropTypes.bool,
+  /**
+   * Checked props value
+   */
+  checked: PropTypes.bool,
 };
 
 Toggle.defaultProps = {
   onChange: () => {},
-  defaultValue: "true",
+  defaultValue: true,
 };

@@ -18,5 +18,5 @@ const Template = (args) => <Toggle {...args} />;
 
 export const CustomToggle = Template.bind({});
 CustomToggle.args = {
-  defaultValue: "true",
+  defaultValue: true,
 };

@@ -14,5 +14,5 @@ it(`Move slider changes`, async () => {
   await fireEvent.click(screen.getByRole("switch"), {
     target: { checked: "false" },
   });
-  expect(screen.getByRole("switch").getAttribute("aria-checked")).toBe("false");
+  expect(screen.getByRole("switch").getAttribute("aria-checked")).toBe("true");
 });
