@@ -15,6 +15,7 @@ export const Button = ({
   typeOfButton,
   ...props
 }) => {
+  console.log("backgroundColor", backgroundColor);
   return (
     <>
       <AntDButton
@@ -24,7 +25,9 @@ export const Button = ({
           `button-${typeOfButton}`,
           `button`,
         ].join(" ")}
-        style={backgroundColor && { backgroundColor }}
+        style={
+          backgroundColor && { backgroundColor: `${backgroundColor}!important` }
+        }
         {...props}
         disabled={disabled}
       >

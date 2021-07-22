@@ -5,9 +5,7 @@ import { Button } from "./Button";
 export default {
   title: "Simform/Button",
   component: Button,
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
+
   parameters: {
     layout: "centered",
   },
