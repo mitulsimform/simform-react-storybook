@@ -43,6 +43,7 @@ export const ModalDialogue = ({
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
+        className="story-modal"
       >
         <div
           id="modalDialogue"

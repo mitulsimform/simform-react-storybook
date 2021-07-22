@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 .storybook-button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Inter;
   font-weight: 700;
   border: 0;
   border-radius: 3em;
@@ -27,4 +28,9 @@
 .storybook-button--large {
   font-size: 16px;
   padding: 12px 24px;
+}
+.story-modal .ant-modal-close-x {
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }

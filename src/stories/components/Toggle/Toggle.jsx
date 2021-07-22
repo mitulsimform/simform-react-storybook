@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Switch } from "antd";
 import PropTypes from "prop-types";
 import "./toggle.css";
@@ -6,13 +6,11 @@ import "./toggle.css";
 /**
  * Primary UI component for user interaction
  */
-export const Toggle = ({
-  onChange,
-  backgroundColor,
-  defaultValue,
-  checked,
-}) => {
+export const Toggle = ({ onChange, backgroundColor, defaultValue }) => {
   const [switchValue, setSwitchValue] = useState(defaultValue);
+  useEffect(() => {
+    setSwitchValue(defaultValue);
+  }, [defaultValue]);
   return (
     <>
       <Switch
@@ -26,7 +24,7 @@ export const Toggle = ({
             backgroundColor: switchValue ? backgroundColor : null,
           }
         }
-        checked={checked || defaultValue}
+        checked={switchValue}
       />
     </>
   );
@@ -40,14 +38,10 @@ Toggle.propTypes = {
   /**
    * Optional default value
    */
-  defaultValue: PropTypes.bool,
-  /**
-   * Checked props value
-   */
-  checked: PropTypes.bool,
+  defaultValue: PropTypes.string,
 };
 
 Toggle.defaultProps = {
   onChange: () => {},
-  defaultValue: true,
+  defaultValue: "true",
 };

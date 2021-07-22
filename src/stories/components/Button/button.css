@@ -1,119 +1,119 @@
-.button{
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.ant-btn.button {
   font-family: Inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
-  line-height: 17px;
-  letter-spacing: 0em;
+  line-height: 18px;
+  letter-spacing: 1px;
   text-align: center;
-}
-.button-action{
-  border-color: transparent !important;
-  color: white!important;
-  background-color: #00A780!important;
-}
-
-.button-secondary{
-  border-color:  #00A780!important;
-  color: #00A780!important;
-  background-color: #FFFFFF!important;
-}
-
-.button-tertiary{
-  border-color: transparent!important;
-  color: #2B2B35!important;
-  background-color: #FFFFFF!important;
-  box-shadow:#FFFFFF!important;
-}
-
-.button-upgrade{
-  border-color: transparent!important;
-  color: white!important;
-  background-color: #0082FF!important;
-}
-.button-destructive{
-  border-color: transparent!important;
-  color: white!important;
-  background-color: #EE5C33!important;
-}
-.button-accent{
-  border-color: transparent!important;
-  color: #2B2B35!important;
-  background-color: #FFC42A!important;
-  border-radius: 100px !important;
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 17px;
-  letter-spacing: 0em;
-  text-align: center;
-}
-
-.button-default-small{
-  height: 32px;
-  width: 132px;
-  left: 0px;
-  top: 0px;
   border-radius: 4px;
-  
+  letter-spacing: 1px;
+}
+.ant-btn.button-action {
+  border-color: transparent;
+  color: white;
+  background-color: #00a780;
 }
 
-.button-default-medium{
+.ant-btn.button-secondary {
+  color: #00a780;
+  background-color: #ffffff;
+  border: 1.5px solid #00a780;
+}
+
+.ant-btn.button-tertiary {
+  border-color: transparent;
+  color: #2b2b35;
+  background-color: #ffffff;
+  box-shadow: none;
+}
+
+.ant-btn.button-upgrade {
+  border-color: transparent;
+  color: white;
+  background-color: #0082ff;
+}
+.ant-btn.button-destructive {
+  border-color: transparent;
+  color: white;
+  background-color: #ee5c33;
+}
+.ant-btn.button-accent {
+  border-color: transparent;
+  color: #2b2b35;
+  background-color: #ffc42a;
+  border-radius: 100px;
+}
+
+.ant-btn.button-default-small {
+  height: 32px;
+  width: 123px;
+}
+
+.ant-btn.button-default-medium {
   width: 154px;
   height: 42px;
-  left: 0px;
-  top: 0px;
-  border-radius: 4px;
-
+  font-size: 16px;
+  line-height: 20px;
 }
 
-.button-default-large{
+.ant-btn.button-default-large {
   width: 173px;
   height: 50px;
-  left: 0px;
-  top: 0px;
-  border-radius: 4px;
-
+  font-size: 18px;
+  line-height: 22px;
 }
 
-.button-action:hover, .button-action:focus{
-  background-color: #14D0A5 !important;
-  color: white !important;
+.ant-btn.button-action:hover,
+.ant-btn.button-action:focus {
+  background-color: #14d0a5;
+  color: white;
+  border-color: #14d0a5;
 }
 
-.button-secondary:hover, .button-secondary:focus{
-  background-color: #E4FFF9 !important;
-  color: #84a19b !important;
+.ant-btn.button-secondary:hover,
+.ant-btn.button-secondary:focus {
+  background-color: #e4fff9;
+  color: #00a780;
+  border-color: #00a780;
 }
 
-.button-tertiary:hover, .button-tertiary:focus{
-  background-color: #EDEDED !important;
-  color: #2B2B35 !important;
-  border-color: transparent !important;
+.ant-btn.button-tertiary:hover,
+.ant-btn.button-tertiary:focus {
+  background-color: #ededed;
+  color: #2b2b35;
+  border-color: transparent;
 }
-.button-upgrade:hover, .button-upgrade:focus{
-  background-color: #006CD5 !important;
-  color: #E4FFF9 !important;
-  border-color: transparent !important;
-}
-
-.button-destructive:hover, .button-destructive:focus{
-  background-color: #D74B23 !important;
-  color: #E4FFF9 !important;
-  border-color: transparent !important;
+.ant-btn.button-upgrade:hover,
+.ant-btn.button-upgrade:focus {
+  background-color: #006cd5;
+  color: #fff;
+  border-color: transparent;
 }
 
-.button-accent:hover, .button-accent:focus{
-  background-color: #E5B129 !important;
-  color: #2B2B35 !important;
-  border-color: transparent !important;
+.ant-btn.button-destructive:hover,
+.ant-btn.button-destructive:focus {
+  background-color: #d74b23;
+  color: #e4fff9;
+  border-color: transparent;
 }
 
-.ant-btn[disabled], .ant-btn[disabled]:hover, .ant-btn[disabled]:focus, .ant-btn[disabled]:active{
-  color: #FFFFFF;
-  background: #D1D1D1;
-  border-color: #D1D1D1;
+.ant-btn.button-accent:hover,
+.ant-btn.button-accent:focus {
+  background-color: #e5b129;
+  color: #2b2b35;
+  border-color: transparent;
+}
+
+.ant-btn.button[disabled],
+.ant-btn.button[disabled]:hover,
+.ant-btn.button[disabled]:focus,
+.ant-btn.button[disabled]:active {
+  color: #ffffff;
+  background: #d1d1d1;
+  border-color: #d1d1d1;
   text-shadow: none;
   box-shadow: none;
 }

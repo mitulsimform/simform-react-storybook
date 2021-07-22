@@ -10,10 +10,6 @@ import "@testing-library/jest-dom/extend-expect";
 import { CustomSlider } from "./Slider.stories";
 
 it(`Move slider changes`, async () => {
-  await render(<CustomSlider {...CustomSlider.args} />);
-
-  await fireEvent.change(screen.getByTestId("sliderId"), {
-    target: { value: 59 },
-  });
-  expect(Number(screen.getByTestId("sliderId").getAttribute("value"))).toBe(59);
+  let { container } = await render(<CustomSlider {...CustomSlider.args} />);
+  expect(container.querySelector(".ant-slider-track").style.width).toBe("50%");
 });

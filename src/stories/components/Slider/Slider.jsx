@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Slider, Switch } from "antd";
+
 import "antd/dist/antd.css";
 import PropTypes from "prop-types";
 import "./slider.css";
@@ -8,18 +10,20 @@ import "./slider.css";
  */
 export const CustomSliderAntd = ({ onChange, defaultValue }) => {
   const [sliderValue, setSliderValue] = useState(defaultValue);
+  useEffect(() => {
+    setSliderValue(defaultValue);
+  }, [defaultValue]);
   return (
     <div className="slidecontainer">
-      <input
-        type="range"
-        min="1"
-        max="100"
+      <Slider
+        defaultValue={defaultValue}
+        disabled={false}
         onChange={(e) => {
           onChange(e);
-          setSliderValue(e.target.value);
+          setSliderValue(e);
         }}
-        data-testid="sliderId"
         value={sliderValue}
+        data-testid="sliderId"
       />
     </div>
   );
