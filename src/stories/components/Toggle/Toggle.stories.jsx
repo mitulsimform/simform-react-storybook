@@ -17,4 +17,6 @@ export default {
 const Template = (args) => <Toggle {...args} />;
 
 export const CustomToggle = Template.bind({});
-CustomToggle.args = {};
+CustomToggle.args = {
+  defaultValue: "true",
+};

@@ -6,14 +6,19 @@ import "./toggle.css";
 /**
  * Primary UI component for user interaction
  */
-export const Toggle = ({ onChange, backgroundColor, onClick }) => {
+export const Toggle = ({ onChange, backgroundColor, defaultValue }) => {
+  const [switchValue, setSwitchValue] = useState(defaultValue);
   return (
     <>
       <Switch
         defaultChecked
-        onChange={onChange}
+        onClick={(e) => {
+          debugger;
+          setSwitchValue(e);
+          onChange(e);
+        }}
         style={backgroundColor && { backgroundColor }}
-        onClick={onClick}
+        checked={switchValue}
       />
     </>
   );
@@ -25,12 +30,12 @@ Toggle.propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * Optional click handler
+   * Optional default value
    */
-  onClick: PropTypes.func,
+  defaultValue: PropTypes.string,
 };
 
 Toggle.defaultProps = {
-  onChange: undefined,
-  onClick: undefined,
+  onChange: () => {},
+  defaultValue: "true",
 };
