@@ -1,4 +1,4 @@
-// Slider.test.js
+// Toggle.test.js
 
 import React from "react";
 
