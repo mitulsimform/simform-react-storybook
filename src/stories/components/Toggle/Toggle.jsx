@@ -13,11 +13,14 @@ export const Toggle = ({ onChange, backgroundColor, defaultValue }) => {
       <Switch
         defaultChecked
         onClick={(e) => {
-          debugger;
           setSwitchValue(e);
           onChange(e);
         }}
-        style={backgroundColor && { backgroundColor }}
+        style={
+          backgroundColor && {
+            backgroundColor: switchValue ? backgroundColor : null,
+          }
+        }
         checked={switchValue}
       />
     </>
