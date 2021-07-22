@@ -6,10 +6,21 @@ import "./slider.css";
 /**
  * Primary UI component for user interaction
  */
-export const CustomSliderAntd = ({ onChange }) => {
+export const CustomSliderAntd = ({ onChange, defaultValue }) => {
+  const [sliderValue, setSliderValue] = useState(defaultValue);
   return (
-    <div class="slidecontainer">
-      <input type="range" min="1" max="100" onChange={onChange} />
+    <div className="slidecontainer">
+      <input
+        type="range"
+        min="1"
+        max="100"
+        onChange={(e) => {
+          onChange(e);
+          setSliderValue(e.target.value);
+        }}
+        data-testid="sliderId"
+        value={sliderValue}
+      />
     </div>
   );
 };
@@ -22,5 +33,6 @@ CustomSliderAntd.propTypes = {
 };
 
 CustomSliderAntd.defaultProps = {
-  onChange: undefined,
+  onChange: () => {},
+  defaultValue: 1,
 };
