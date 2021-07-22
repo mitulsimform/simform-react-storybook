@@ -38,7 +38,7 @@ Toggle.propTypes = {
   /**
    * Optional default value
    */
-  defaultValue: PropTypes.string,
+  defaultValue: PropTypes.bool,
 };
 
 Toggle.defaultProps = {
